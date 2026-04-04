@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-vaizai-sky: #38bdf8;
+  --color-vaizai-sky-dark: #0ea5e9;
+  --color-vaizai-sky-light: #bae6fd;
+  --color-vaizai-white: #ffffff;
+  --color-vaizai-black: #080a0f;
+  --color-vaizai-charcoal: #10141e;
+  --color-vaizai-deep: #0c1120;
+  --color-vaizai-muted: #94a3b8;
+  --color-vaizai-border: rgba(56,189,248,0.2);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080a0f;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ——— Custom scrollbar ——— */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080a0f; }
+::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 2px; }
+
+/* ——— Apple Liquid Glass ——— */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    inset 0 -1px 0 rgba(0,0,0,0.06),
+    0 8px 32px rgba(0,0,0,0.25),
+    0 2px 6px rgba(0,0,0,0.12);
+}
+
+.glass-strong {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255,255,255,0.16),
+    inset 0 -1px 0 rgba(0,0,0,0.08),
+    0 12px 40px rgba(0,0,0,0.35),
+    0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ——— Text gradient ——— */
+.text-gradient {
+  background: linear-gradient(120deg, #ffffff 0%, #38bdf8 50%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sky {
+  background: linear-gradient(120deg, #38bdf8 0%, #7dd3fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ——— Glow effects ——— */
+.glow-sky {
+  box-shadow: 0 0 30px rgba(56,189,248,0.3), 0 0 60px rgba(56,189,248,0.1);
+}
+
+.glow-sky-sm {
+  box-shadow: 0 0 15px rgba(56,189,248,0.25);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(56,189,248,0.5);
+}
+
+/* ——— Animated grid background ——— */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(56,189,248,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ——— Sky-blue button ——— */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  border-radius: 9999px;
+  padding: 0.875rem 2.5rem;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 0 25px rgba(56,189,248,0.35);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #38bdf8, #7dd3fc);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(56,189,248,0.55), 0 20px 40px -10px rgba(56,189,248,0.3); }
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  border-radius: 9999px;
+  padding: 0.875rem 2.5rem;
+  border: 1.5px solid rgba(56,189,248,0.4);
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  border-color: #38bdf8;
+  background: rgba(56,189,248,0.08);
+  color: #38bdf8;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.2);
+}
+
+/* ——— Section label ——— */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  padding: 0.35rem 1rem;
+  border: 1px solid rgba(56,189,248,0.3);
+  border-radius: 9999px;
+  background: rgba(56,189,248,0.06);
+  margin-bottom: 1.25rem;
+}
+
+/* ——— Floating animation ——— */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(56,189,248,0.3); }
+  50% { box-shadow: 0 0 50px rgba(56,189,248,0.6), 0 0 80px rgba(56,189,248,0.2); }
+}
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ——— Noise overlay ——— */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
