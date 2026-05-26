@@ -7,7 +7,7 @@ import { Mail, MapPin, Phone, Send, CheckCircle, Linkedin } from "lucide-react";
 const contactInfo = [
     { icon: Mail, label: "Email", value: "contact@vaizai.in", href: "mailto:contact@vaizai.in" },
     { icon: Phone, label: "Phone", value: "+91 7418976102", href: "tel:+917418976102" },
-    { icon: MapPin, label: "Address", value: "Kinathukadavu, Coimbatore, Tamil Nadu 641050", href: null },
+    { icon: MapPin, label: "Address", value: "Sai Baba Colony, Coimbatore, Tamil Nadu 641050", href: null },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/vaizai-solutions", href: "https://www.linkedin.com/in/vaizai-solutions-02602b3b8/" },
 ];
 

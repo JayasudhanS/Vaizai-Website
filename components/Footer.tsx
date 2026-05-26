@@ -63,7 +63,7 @@ export default function Footer() {
                             </a>
                             <p className="flex items-start gap-2">
                                 <MapPin size={14} className="text-sky-500 mt-0.5 shrink-0" />
-                                Kinathukadavu, Coimbatore, Tamil Nadu 641050
+                                Sai Baba Colony, Coimbatore, Tamil Nadu 641050
                             </p>
                             <a
                                 href="https://www.linkedin.com/in/vaizai-solutions-02602b3b8/"
