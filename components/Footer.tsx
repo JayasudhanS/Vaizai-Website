@@ -48,7 +48,7 @@ export default function Footer() {
                             />
                         </Link>
                         <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-8">
-                            Building the future beyond reality — next-gen digital ecosystems powered by AI, XR, and cloud technologies.
+                            Building the future beyond reality — next-gen digital ecosystems powered by AI, XR, and cloud technologies (Mostly remote).
                         </p>
                         <div className="flex flex-col gap-3 text-sm text-white/50">
                             <a href="mailto:contact@vaizai.in" className="flex items-center gap-2 hover:text-sky-400 transition-colors group">
